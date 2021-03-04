@@ -85,7 +85,7 @@
             align-self: center;
             margin-left: auto;
             margin-right: auto;
-            width: 500px;
+            max-width: 500px;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -107,14 +107,16 @@
             margin-top: 0;
             font-size: 1.5em;
         }
-        .content__text--danger{
+
+        .content__text--danger {
             color: tomato;
         }
 
-        .link-container{
+        .link-container {
             display: flex;
             justify-content: center;
         }
+
         .content__link {
             padding: 18px;
             background-color: #91cb3e;
@@ -139,6 +141,25 @@
         .--responsive-img {
             max-width: 100%;
             height: auto;
+        }
+
+        @media (max-width: 500px) {
+            #scene {
+                left: -50vw;
+                min-width: 400vw;
+                min-height: 120vh;
+
+            }
+
+            .content__title {
+                font-size: 5em;
+
+            }
+            
+        .content {
+            top: -120vh;
+        }
+
         }
     </style>
 </body>
