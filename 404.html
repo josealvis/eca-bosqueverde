@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="404 not found">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <title>Bosque verde</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="scene" data-relative-input="true">
+            <div data-depth="0.3    "><img class="--responsive-img bg-img" src="forest-931706_1920.jpg"
+                    title="forest-background" />
+            </div>
+        </div>
+        <div id="background-cover"></div>
+        <div class="content">
+            <h1 class="content__title">Oops!</h1>
+            <p class="content__text content__text--danger">404</p>
+            <p class="content__text">Parece que te has perdido en el bosque.</p>
+            <div class="link-container">
+                <a class="content__link" href="/">Regresar a la patalla de incio</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script>
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene, {
+            limitY: 1,
+            originX: 0,
+            originY: 0
+        });
+    </script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            max-width: 100vw;
+            max-height: 100vh;
+            overflow: hidden;
+            font-family: 'Comfortaa', cursive;
+            color: white;
+        }
+
+        #background-cover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-height: 100vh;
+            min-width: 100vw;
+            content: "";
+            background-color: black;
+            opacity: 40%;
+        }
+
+        #scene {
+            position: relative;
+
+            top: -20vh;
+            left: -5vw;
+            min-width: 120vw;
+            min-height: 120vh;
+
+        }
+
+        .container {
+            min-width: 100%;
+            min-height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            overflow: hidden;
+        }
+
+        .content {
+            align-self: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            top: -140vh;
+        }
+
+        .content__title {
+            font-size: 10em;
+            font-family: 'Fredoka One', cursive;
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .content__text {
+            text-align: center;
+            position: relative;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .content__text--danger{
+            color: tomato;
+        }
+
+        .link-container{
+            display: flex;
+            justify-content: center;
+        }
+        .content__link {
+            padding: 18px;
+            background-color: #91cb3e;
+            color: black;
+            border-radius: 20px;
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .content__link:hover {
+            background-color: transparent;
+            color: #91cb3e;
+        }
+
+        .bg-img {
+            position: relative;
+            top: -50%;
+        }
+
+        .--responsive-img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</body>
+
+</html>
